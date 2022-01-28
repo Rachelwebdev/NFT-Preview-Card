@@ -1,23 +1,44 @@
-* {
-  margin: 0;
-  padding: 0;
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
   box-sizing: border-box;
 }
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-font-smoothing: antialiased;
+  background-color: hsl(233, 47%, 7%);
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
+}
+
 
 body {
   background-color: hsl(217, 54%, 11%);
-  padding: 200px;
   line-height: 1.5;
   font: 18px outfit;
 }
-
-/* .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-} */
 
 .card {
   background-color: hsl(216, 50%, 16%);
@@ -100,4 +121,10 @@ h2 {
 
 .jules {
   color: #f8f0e3;
+}
+
+@media only screen and (max-width: 550px) {
+  body {
+    padding: 0 20px;
+  }
 }
